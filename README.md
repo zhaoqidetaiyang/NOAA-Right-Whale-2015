@@ -8,3 +8,5 @@ I got rank 8 on leaderboard
 3.run metric_learning.py to train metric learning
 
 4.run pred_class to get the result
+
+tricks: some whales can not be detected, you can pick the whale by hand to label the box,if you do that you can get higher score.may be you can get 1th. 
