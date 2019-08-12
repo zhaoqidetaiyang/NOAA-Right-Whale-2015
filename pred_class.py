@@ -83,23 +83,10 @@ def main():
 
         print('Epoch: %s, Loss: %s, acc: %s,Time: %s' % (epoch, total_loss,acc,time.time()-start_time))
         if epoch>0 and epoch%2==0:
-            # net.save_parameters('pred_box_'+str(epoch)+'.params')
-            # net.save_parameters('8.10_new_pred_box_' + str(epoch) + '.params')
+            
             net.save_parameters('8.13_crop_pred_box_' + str(epoch) + '.params')
 
-            # #net.save_parameters('together_metric_' + str(epoch) + '.params')
-            # is_cluster = False
-            # if 'running_package' in sys.argv[0] and 'home' not in sys.argv[0]:
-            #     is_cluster = True
-            #     project_path = '/running_package'
-            #
-            # net.save_parameters('together_metric_' + str(epoch) + '.params')
-            #
-            # if is_cluster:
-            #     hdfs_order = 'hdfs dfs -put {}  hdfs://njstorage001.hogpu.cc:8020/user/jiaxin.wang/model'.format(
-            #         'together_metric_' + str(epoch) + '.params')
-            #     os.system(hdfs_order)
-
+           
 
 if __name__ == '__main__':
     main()
